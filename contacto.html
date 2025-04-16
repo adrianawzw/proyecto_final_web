@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>conatcto-i2</title>
+    
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh; margin: 0; height: 100%; text-align: center">
+    <!-- Header -->
+    <header class="header" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../imgs/fondoheader.jpg); padding: 20px;">
+        
+        <div class="menu container" style="display: flex; align-items: center; justify-content: space-between;">
+
+            <a href="#" class="logo" style="text-decoration: none;">Logo</a>
+            <!--<input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="imgs/menu.png" alt="" class="menu-icono">
+            </label> -->
+
+            <p style="margin: 0 auto;">
+                <a href="" style="margin: 0 15px; text-decoration: none;">Inicio</a>
+                <a href="" style="margin: 0 15px; text-decoration: none;">Servicios</a>
+                <a href="" style="margin: 0 15px; text-decoration: none;">Acerca De</a>
+                <a href="" style="margin: 0 15px; text-decoration: none;">Cuenta</a>
+                <a href="" style="margin: 0 15px; text-decoration: none;">Contacto</a>
+            </p>
+            <!-- <nav class="navbar"> barra de nav
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Acerca de</a></lzi>
+                    <li><a href="#">Inicio Sesión</a></li>
+                </ul>
+            </nav> -->
+
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+        <h2>Contactanos</h2> 
+        <form action="#">
+            <label for="nombre" style="display: block;">Nombres</label>
+            <input type="text" id="nombre" name="nombre">
+
+            <label for="apellido" style="display: block;">Apellidos</label>
+            <input type="text" id="apellido" name="apellido">
+
+            <label for="email" style="display: block;">Correo Electronico</label>
+            <input type="email" id="email" name="email">
+
+            <label for="telefono" style="display: block;">Numero telefonico</label>
+            <input type="number" id="telfono" name="telafono">
+
+            <label for="dni" style="display: block;">DNI</label>
+            <input type="text" id="dni" name="dni" pattern="[0-9]{8}" maxlength="8">
+
+            <label for="sexo" style="display: block;">Sexo:</label>
+            
+            <input type="radio" id="femenino" name="sexo">
+            <label for="femenino">Femenino</label>
+            <input type="radio" id="masculino" name="sexo">
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="otros" name="sexo">
+            <label for="otros">Otros</label>
+            <br>
+            <input style="width: 80px; height: 40px;" type="submit" value="enviar">
+        </form>
+
+        <br>
+        <div style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../imgs/bg2.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 100px 0;">
+            
+            <p style="font-size: 1.3rem; color: aliceblue;">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi delectus cum suscipit dolorum doloremque tempora nesciunt at commodi? Quam est ex labore tempora voluptates! Suscipit id consequuntur incidunt dolore quaerat? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat autem nam commodi iusto alias eum dolorem magnam nemo fuga quos cumque doloremque maiores dignissimos dolore ullam consequatur, ad dolorum hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. At numquam sapiente tempora necessitatibus laudantium quasi, aut dolorem ipsam, consequuntur non laborum enim veritatis temporibus iusto nostrum voluptates perferendis porro labore?
+            </p>
+            <a href="#" class="btn-1">Info</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background-color: #7a7575; color: white; padding: 20px 0; margin-top: 0; text-align: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; max-width: 1200px; justify-content: space-between">
+
+            <!-- Copyright -->
+            <div style="display: flex; flex-direction: column;">
+                <p>
+                   <a href="" style="display: block; margin: 5px 0;">Politicas y terminos</a>
+                   <a href="" style="display: block; margin: 5px 0;">Preguntas</a>
+                   <a href="" style="display: block; margin: 5px 0;">Canal de Whatsapp</a>
+                   <a href="" style="display: block; margin: 5px 0;">Facebook</a>
+                </p>
+            </div>
+            <div style="margin-top: 10px; font-size: 14px;">
+                © 2025 Proyecto. taller prog. web.
+            </div>
+
+        </div>
+        
+    </footer>
+</body>
+</html>
