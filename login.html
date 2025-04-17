@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuenta</title>
+    <style>
+        /* Estilos para el formulario de inicio de sesión */
+        #loginForm {
+            display: none; /* Oculto inicialmente */
+            position: fixed; /* Para que aparezca sobre el contenido */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000; /* Asegura que esté encima de todo */
+        }
+        #errorMessage {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body style="margin: 0; height: 100%; text-align: center;">
+
+    <header class="header" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../imgs/fondoheader.jpg); padding: 20px;">
+        
+        <div class="menu container" style="display: flex; align-items: center; justify-content: space-between;">
+
+            <a href="#" class="logo" style="text-decoration: none;">Logo</a>
+
+            <p style="margin: 0 auto;">
+                <a href="http://127.0.0.1:5500/Inicio.html" style="margin: 0 15px; text-decoration: none;">Inicio</a>
+                <a href="http://127.0.0.1:5500/servicios.html" style="margin: 0 15px; text-decoration: none;">Servicios</a>
+                <a href="http://127.0.0.1:5500/acercade.html" style="margin: 0 15px; text-decoration: none;">Acerca De</a>
+                <a href="#" id="cuentaLink" style="margin: 0 15px; text-decoration: none;">Cuenta</a>
+                <a href="#" id="logoutLink" style="display: none; margin: 0 15px; text-decoration: none;">Cerrar sesión</a>
+                <span id="welcomeMessage" style="display: none; margin: 0 15px; color: white;"></span>
+                <a href="" style="margin: 0 15px; text-decoration: none;">Contacto</a>
+            </p>
+        </div>
+
+        <div class="header-content container" style="color: aliceblue;">
+            <h1>Titulo Proyecto</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam architecto eveniet eligendi fugiat maxime nobis vitae quis labore ea. Ut, sequi accusamus? Ipsa, molestiae blanditiis. Dolorum incidunt soluta earum impedit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid nisi quis qui accusamus molestias illum quisquam! Modi soluta ut adipisci dicta ipsam quisquam libero illo! Sed qui incidunt perspiciatis ut.
+            </p>
+            <a href="#" class="btn-1">Mas informacion</a>
+        </div>
+    </header>
+
+    <main>
+        <h2>Servicios principales</h2>
+
+        <div style="margin: 0 35px; display: flex; align-items: center; justify-content: space-between;">
+            <div style="width: 20%;">
+                <h3>Servicio 1</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam aliquam animi iste perspiciatis corrupti fugiat blanditiis reprehenderit facilis inventore totam corporis nisi voluptates, dignissimos eveniet velit amet? odio iusto?</p>
+            </div>
+            <div style="width: 20%;">
+                <h3>Servicio 2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro expedita officiis dolorem ducimus? Quod totam culpa ab eos dicta nisi similique officiis commodi odit tempore recusandae facilis, a nobis repellendus.</p>
+            </div>
+            <div style="width: 20%;">
+                <h3>Servicio 3</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi optio repudiandae totam quisquam, nemo neque pariatur omnis laboriosam id facere? Accusantium accusamus minima cum temporibus a atque voluptatibus provident praesentium.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <section style="color: white; padding: 20px; margin-top: 20px; background-color: aqua; background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../imgs/fondoheader.jpg); padding: 20px;">
+        <h2>Contactanos</h2> 
+        <form action="#">
+            <label for="nombre" style="display: block;">Nombres</label>
+            <input type="text" id="nombre" name="nombre">
+
+            <label for="apellido" style="display: block;">Apellidos</label>
+            <input type="text" id="apellido" name="apellido">
+
+            <label for="email" style="display: block;">Correo Electronico</label>
+            <input type="email" id="email" name="email">
+
+            <label for="telefono" style="display: block;">Numero telefonico</label>
+            <input type="number" id="telfono" name="telafono">
+
+            <label for="dni" style="display: block;">DNI</label>
+            <input type="text" id="dni" name="dni" pattern="[0-9]{8}" maxlength="8">
+
+            <label for="sexo" style="display: block;">Sexo:</label>
+            
+            <input type="radio" id="femenino" name="sexo">
+            <label for="femenino">Femenino</label>
+            <input type="radio" id="masculino" name="sexo">
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="otros" name="sexo">
+            <label for="otros">Otros</label>
+            <br>
+            <input style="width: 80px; height: 40px;" type="submit" value="enviar">
+        </form>
+    </section>
+    <div id="loginForm">
+        <h2>Iniciar sesión</h2>
+        <form id="loginFormulario">
+            <label for="username">Usuario:</label><br>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">Contraseña:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" value="Iniciar sesión">
+            <p id="errorMessage"></p>
+            <button type="button" id="showPasswordButton">Mostrar contraseña</button>
+        </form>
+        <button id="closeLogin">Cerrar</button>
+    </div>
+
+    <script>
+        // Inicio de la lógica de JavaScript para el inicio de sesión
+        const cuentaLink = document.getElementById('cuentaLink');
+        const loginForm = document.getElementById('loginForm');
+        const closeLogin = document.getElementById('closeLogin');
+        const loginFormulario = document.getElementById('loginFormulario');
+        const logoutLink = document.getElementById('logoutLink');
+        const welcomeMessage = document.getElementById('welcomeMessage');
+        const errorMessage = document.getElementById('errorMessage');
+        const showPasswordButton = document.getElementById('showPasswordButton');
+        const passwordField = document.getElementById('password');
+
+        // Función para verificar si el usuario ha iniciado sesión
+        function checkLoginStatus() {
+            const username = localStorage.getItem('username');
+            if (username) {
+                // El usuario ha iniciado sesión
+                cuentaLink.style.display = 'none';
+                logoutLink.style.display = 'inline';
+                welcomeMessage.style.display = 'inline';
+                welcomeMessage.textContent = 'Bienvenido, ${username}!';
+            } else {
+                // El usuario no ha iniciado sesión
+                cuentaLink.style.display = 'inline';
+                logoutLink.style.display = 'none';
+                welcomeMessage.style.display = 'none';
+            }
+        }
+
+        // Verificar el estado de inicio de sesión al cargar la página
+        checkLoginStatus();
+
+        cuentaLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Evita que el enlace recargue la página
+            loginForm.style.display = 'block'; // Muestra el formulario
+        });
+
+        closeLogin.addEventListener('click', function() {
+            loginForm.style.display = 'none'; // Oculta el formulario
+            errorMessage.textContent = ''; // Borra el mensaje de error
+        });
+
+        loginFormulario.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simulación de una base de datos de usuarios (¡NO SEGURO!)
+            const usuarios = {
+                'usuario1': 'contraseña1',
+                'usuario2': 'contraseña2'
+            };
+
+            if (usuarios[username] && usuarios[username] === password) {
+                // Inicio de sesión exitoso
+                localStorage.setItem('username', username);
+                loginForm.style.display = 'none';
+                checkLoginStatus(); // Actualizar la interfaz de usuario
+                errorMessage.textContent = ''; // Borra el mensaje de error
+            } else {
+                errorMessage.textContent = 'Nombre de usuario o contraseña incorrectos.'; // Muestra el mensaje de error
+            }
+        });
+
+        logoutLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            localStorage.removeItem('username'); // Cerrar sesión
+            checkLoginStatus(); // Actualizar la interfaz de usuario
+        });
+
+        // Lógica para mostrar/ocultar contraseña
+        showPasswordButton.addEventListener('click', function() {
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                showPasswordButton.textContent = 'Ocultar contraseña';
+            } else {
+                passwordField.type = 'password';
+                showPasswordButton.textContent = 'Mostrar contraseña';
+            }
+        });
+        // Fin de la lógica de JavaScript para el inicio de sesión
+    </script>
+    <footer style="background-color: #7a7575; color: white; padding: 20px 0; margin-top: 0; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto; justify-content: space-between; align-items: center">
+            <div style="display: flex; flex-direction: column;">
+                <p>
+                    <a href="" style="display: block; margin: 5px 0;">1</a>
+                    <a href="" style="display: block;">2</a>
+                    <a href="" style="display: block;">3</a>
+                    <a href="" style="display: block;">4</a>
+                </p>
+            </div>
+            <div style="margin-top: 10px; font-size: 14px;">
+                © 2025 Copyright 2025.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
